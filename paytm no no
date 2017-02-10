@@ -1,0 +1,31 @@
+paytm no no 
+feed me -khaana
+directions
+find:
+	çab-	
+	bus-	
+	train-
+	flight-
+	hotels-
+	coupons-
+web browser
+facebook status
+twitter
+Developer commmunity:
+	ssh terminal
+best price-mysmartprice
+news
+score
+weather
+email
+Astrology
+Air pollution level
+live Traffic status
+Medicine thing
+
+
+
+dependencies :
+UBER:
+pip install uber_rides
+pip install requests
