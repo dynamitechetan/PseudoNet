@@ -9,14 +9,15 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class News extends AppCompatActivity {
+public class Directions extends AppCompatActivity {
     Button search;
-    EditText what;
+    EditText origin,destination;
     TextView output;
     String outputText;
     private IntentFilter intentFilter;
@@ -34,46 +35,54 @@ public class News extends AppCompatActivity {
             data.setIncomingData(incomingDataContent);
             data.setSenderID(senderID);
             data.setStatus("Completed");
-//            checkChannel(incomingDataContent);
+            checkChannel(incomingDataContent);
 //            dataList.add(data);
 //            listAdapter.notifyDataSetChanged();
-            if (incomingDataContent.contains("news")||incomingDataContent.contains("News")) {
+            if (incomingDataContent.contains("Direction")||incomingDataContent.contains("direction")) {
                 p.hide();
                 outputText = incomingDataContent;
-//
-//                String a = outputText.substring(5);
-                output.setText(outputText);
+//                outputText.
+                output.setText((outputText));
             }
-            Toast.makeText(getApplicationContext(), "hahaha", Toast.LENGTH_SHORT).show();
         }
     };
+
+
+    private void checkChannel(String incomingDataContent) {
+        if (incomingDataContent.contains("weather")) {
+            data.setChannel("weather");
+        } else if (incomingDataContent.contains("wikipedia.org/wiki/")) {
+            data.setChannel("Wikipedia");
+        } else
+            data.setChannel("Web");
+
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_news);
+        setContentView(R.layout.activity_directions);
 
         intentFilter = new IntentFilter();
         intentFilter.addAction("SMS_RECEIVED_ACTION");
         Toast.makeText(getApplicationContext(), "Listening for Incoming Messages", Toast.LENGTH_LONG).show();
-        output = (TextView) findViewById(R.id.news);
-//        what =(EditText) findViewById(R.id.what);
+        output = (TextView) findViewById(R.id.output);
+        origin =(EditText) findViewById(R.id.origin);
+        destination =(EditText) findViewById(R.id.destination);
         p = new ProgressDialog(this);
-//        search = ( Button) findViewById(R.id.search);
-//        search.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//
-//            }
-//        });
+        search = ( Button) findViewById(R.id.search);
+        search.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+//                p.setMessage("Getting Directions");
+//                p.show();
+//                SmsManager sms = SmsManager.getDefault();
+//                ArrayList<String> parts = sms.divideMessage("directions:"+origin+":"+destination);
+//                sms.sendMultipartTextMessage("8872039507", null, parts, null, null);
+//                output.setText(Html.fromHtml(""));
 
-
-
-
-//        p.setMessage("Getting News");
-//        p.show();
-//        SmsManager sms = SmsManager.getDefault();
-//        ArrayList<String> parts = sms.divideMessage("news");
-//        sms.sendMultipartTextMessage("8872039507", null, parts, null, null);
+            }
+        });
 
     }
 
@@ -106,6 +115,8 @@ public class News extends AppCompatActivity {
         unregisterReceiver(intentReciever);
         super.onPause();
     }
+
+
 
 
     private static String str_piece(String str, char separator, int index) {

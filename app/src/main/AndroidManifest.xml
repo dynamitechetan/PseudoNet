@@ -14,9 +14,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Black">
-        <activity android:name=".MainActivity">
-
-        </activity>
+        <activity android:name=".MainActivity" />
 
         <receiver
             android:name=".SMSListener"
@@ -30,16 +28,17 @@
         </receiver>
 
         <activity android:name=".BookACab" />
-        <activity android:name=".News" >
+        <activity android:name=".News">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".nearBy">
-
-        </activity>
+        <activity android:name=".nearBy" />
+        <activity android:name=".Directions" />
+        <activity android:name=".Ping" />
+        <activity android:name=".Wikipedia"></activity>
     </application>
 
 </manifest>

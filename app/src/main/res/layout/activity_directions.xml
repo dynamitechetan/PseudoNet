@@ -24,7 +24,7 @@
             android:layout_height="50dp"
             android:layout_margin="10dp"
             android:layout_marginTop="-8dp"
-            android:text="Request Uber Here"
+            android:text="Find Directions"
             android:layout_below="@+id/destination"
             android:textColor="#fff"
             android:id="@id/search"
