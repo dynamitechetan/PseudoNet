@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp"
+    android:background="@drawable/background"
+    tools:context="xyz.hashbnm.pseudonet.MainActivity">
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/serach"
+        android:hint="www.google.com"
+        android:textColorHint="#fff"
+        android:background="@drawable/sear"
+        />
+    <ImageView
+        android:layout_width="30dp"
+        android:gravity="end|right"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/search"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_height="30dp" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textColor="#fff"
+        android:text="sdfghjhgfdsdcfvbnm,asdasdasdasdasdadad"
+        android:layout_marginTop="16dp"
+        android:layout_below="@+id/serach"/>
+</RelativeLayout>

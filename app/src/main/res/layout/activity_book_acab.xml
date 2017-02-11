@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_book_acab"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bluepurpel"
+    tools:context="xyz.hashbnm.pseudonet.BookACab">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/origin"
+        android:elevation="100dp"
+        android:padding="16dp"
+        android:hint="Chandigarh"
+        android:layout_margin="10dp"
+        android:background="@drawable/roundedit"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:layout_marginTop="-8dp"
+        android:text="SEARCH"
+
+        android:layout_below="@+id/destination"
+        android:textColor="#fff"
+        android:background="@drawable/grad"
+        />
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/destination"
+        android:elevation="100dp"
+        android:layout_below="@id/origin"
+        android:padding="16dp"
+        android:hint="Mohali"
+
+        android:layout_margin="10dp"
+        android:background="@drawable/roundedit"/>
+</RelativeLayout>
+</RelativeLayout>
