@@ -43,10 +43,8 @@ public class   Travel extends AppCompatActivity {
 //            listAdapter.notifyDataSetChanged();
             if (incomingDataContent.contains("trains")||incomingDataContent.contains("Trains")) {
                 p.hide();
-                origin.setVisibility(GONE);
-                destination.setVisibility(GONE);
+                origin.setVisibility(GONE);date.setVisibility(GONE);destination.setVisibility(GONE);
                 search.setVisibility(GONE);
-                date.setVisibility(GONE);
                 outputText = incomingDataContent;
 //                outputText.
                 output.setText((outputText));
