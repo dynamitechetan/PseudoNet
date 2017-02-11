@@ -5,8 +5,8 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
-import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -15,10 +15,11 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class BookACab extends AppCompatActivity {
+import static android.view.View.GONE;
 
+public class Flights extends AppCompatActivity {
     Button search;
-    EditText origin,destination;
+    EditText origin,date,destination;
     TextView output;
     String outputText;
     private IntentFilter intentFilter;
@@ -39,8 +40,12 @@ public class BookACab extends AppCompatActivity {
             checkChannel(incomingDataContent);
 //            dataList.add(data);
 //            listAdapter.notifyDataSetChanged();
-            if (incomingDataContent.contains("cab")||incomingDataContent.contains("Cab")) {
+            if (incomingDataContent.contains("flights")||incomingDataContent.contains("Flights")) {
                 p.hide();
+                origin.setVisibility(GONE);
+                destination.setVisibility(GONE);
+                search.setVisibility(GONE);
+                date.setVisibility(GONE);
                 outputText = incomingDataContent;
 //                outputText.
                 output.setText((outputText));
@@ -62,7 +67,7 @@ public class BookACab extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_book_acab);
+        setContentView(R.layout.activity_travel);
 
         intentFilter = new IntentFilter();
         intentFilter.addAction("SMS_RECEIVED_ACTION");
@@ -72,13 +77,15 @@ public class BookACab extends AppCompatActivity {
         destination =(EditText) findViewById(R.id.destination);
         p = new ProgressDialog(this);
         search = ( Button) findViewById(R.id.search);
+        date = ( EditText) findViewById(R.id.date);
+
         search.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 //                p.setMessage("Getting Directions");
 //                p.show();
 //                SmsManager sms = SmsManager.getDefault();
-//                ArrayList<String> parts = sms.divideMessage("cab:"+origin+":"+destination);
+//                ArrayList<String> parts = sms.divideMessage("flights:"+origin+":"+destination+":"+date);
 //                sms.sendMultipartTextMessage("8872039507", null, parts, null, null);
 //                output.setText(Html.fromHtml(""));
 
@@ -118,6 +125,8 @@ public class BookACab extends AppCompatActivity {
     }
 
 
+
+
     private static String str_piece(String str, char separator, int index) {
         String str_result = "";
         int count = 0;
@@ -137,4 +146,5 @@ public class BookACab extends AppCompatActivity {
         return str_result;
     }
 }
+
 

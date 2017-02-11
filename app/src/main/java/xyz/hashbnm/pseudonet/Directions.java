@@ -15,6 +15,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import static android.view.View.GONE;
+
 public class Directions extends AppCompatActivity {
     Button search;
     EditText origin,destination;
@@ -40,6 +42,9 @@ public class Directions extends AppCompatActivity {
 //            listAdapter.notifyDataSetChanged();
             if (incomingDataContent.contains("Direction")||incomingDataContent.contains("direction")) {
                 p.hide();
+                origin.setVisibility(GONE);
+                destination.setVisibility(GONE);
+                search.setVisibility(GONE);
                 outputText = incomingDataContent;
 //                outputText.
                 output.setText((outputText));

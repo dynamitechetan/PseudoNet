@@ -4,11 +4,13 @@
     android:id="@+id/activity_book_acab"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bluepurpel"
     tools:context="xyz.hashbnm.pseudonet.BookACab">
-    <RelativeLayout
+
+    <ImageView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/check"/>
         <EditText
             android:layout_width="match_parent"
             android:layout_height="50dp"
@@ -45,7 +47,6 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text=""
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
             android:layout_below="@+id/search"
@@ -53,4 +54,3 @@
             android:textColor="#fff"
             android:id="@+id/output" />
     </RelativeLayout>
-</RelativeLayout>

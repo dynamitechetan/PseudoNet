@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">PseudoNet</string>
+    <string name="title_activity_busses">Busses</string>
 </resources>

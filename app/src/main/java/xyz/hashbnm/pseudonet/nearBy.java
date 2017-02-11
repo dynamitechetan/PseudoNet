@@ -18,6 +18,8 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
+import static android.view.View.GONE;
+
 public class nearBy extends AppCompatActivity {
     Button search;
     EditText what;
@@ -43,8 +45,10 @@ public class nearBy extends AppCompatActivity {
 //            listAdapter.notifyDataSetChanged();
             if (incomingDataContent.contains("nearby")||incomingDataContent.contains("Nearby")) {
                 p.hide();
+                what.setVisibility(GONE);
+
+                search.setVisibility(GONE);
                 outputText = incomingDataContent;
-              outputText.replaceAll("nearby:", "");
 //              weatherstatus = ( str_piece(weatherstatus, ',', 1));
 //                outputText.
                 output.setText(outputText);

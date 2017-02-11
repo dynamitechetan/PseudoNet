@@ -28,17 +28,23 @@
         </receiver>
 
         <activity android:name=".BookACab" />
-        <activity android:name=".News">
+        <activity android:name=".News" />
+        <activity android:name=".nearBy" />
+        <activity android:name=".Directions" />
+        <activity android:name=".Ping" />
+        <activity android:name=".Wikipedia" />
+        <activity android:name=".Travel">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".nearBy" />
-        <activity android:name=".Directions" />
-        <activity android:name=".Ping" />
-        <activity android:name=".Wikipedia"></activity>
+        <activity android:name=".Flights" />
+        <activity
+            android:name=".Busses"
+            android:label="@string/title_activity_busses"
+            android:theme="@style/Black.NoActionBar"></activity>
     </application>
 
 </manifest>

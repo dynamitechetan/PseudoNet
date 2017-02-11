@@ -4,18 +4,21 @@
     android:id="@+id/activity_book_acab"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bluepurpel"
     tools:context="xyz.hashbnm.pseudonet.BookACab">
-    <RelativeLayout
+    <ImageView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/travel"/>
+
         <EditText
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:id="@+id/origin"
             android:elevation="100dp"
             android:padding="16dp"
-            android:hint="From : Chandigarh"
+            android:hint="From : Delhi"
+            android:layout_marginTop="20dp"
             android:layout_margin="10dp"
             android:background="@drawable/roundedit"/>
 
@@ -24,10 +27,10 @@
             android:layout_height="50dp"
             android:layout_margin="10dp"
             android:layout_marginTop="-8dp"
-            android:text="Request Uber Here"
-            android:layout_below="@+id/destination"
+            android:text="Find Trains"
+            android:layout_below="@+id/date"
             android:textColor="#fff"
-            android:id="@+id/search"
+            android:id="@id/search"
             android:background="@drawable/grad"
             />
 
@@ -38,7 +41,18 @@
             android:elevation="100dp"
             android:layout_below="@id/origin"
             android:padding="16dp"
-            android:hint="To: Mohali"
+            android:hint="To: Goa"
+
+            android:layout_margin="10dp"
+            android:background="@drawable/roundedit"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/date"
+            android:elevation="100dp"
+            android:layout_below="@id/destination"
+            android:padding="16dp"
+            android:hint="Date: yyyymmdd"
 
             android:layout_margin="10dp"
             android:background="@drawable/roundedit"/>
@@ -53,4 +67,3 @@
             android:textColor="#fff"
             android:id="@+id/output" />
     </RelativeLayout>
-</RelativeLayout>
