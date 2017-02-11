@@ -1,13 +1,312 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_actions_do"
+    android:id="@+id/activity_book_acab"
     android:layout_width="match_parent"
+    android:background="@drawable/bluepurpel"
+    android:orientation="vertical"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="xyz.hashbnm.pseudonet.ActionsDO">
+    tools:context="xyz.hashbnm.pseudonet.BookACab">
 
-</RelativeLayout>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/id"
+        android:elevation="100dp"
+        android:padding="16dp"
+        android:hint="Droplet ID"
+        android:layout_marginTop="20dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/roundedit"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:id="@+id/action"
+        android:text="sda"
+        android:textSize="20dp"
+        android:fontFamily="monospace"
+        android:padding="16dp"
+        android:textColor="#fff"
+        android:layout_height="wrap_content" />
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:weightSum="3"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/hootel"
+                android:layout_centerInParent="true"
+                android:scaleType="centerCrop"
+                android:layout_alignParentTop="true"
+                android:id="@+id/enable_backups"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="enable_backups"
+                android:layout_centerInParent="true"
+
+                android:layout_below="@id/enable_backups"
+                android:layout_marginTop="5dp"
+                />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/busstand"
+                android:scaleType="centerCrop"
+                android:layout_alignParentTop="true"
+                android:layout_centerInParent="true"
+
+                android:id="@+id/disable_backups"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="disable_backups"
+                android:layout_below="@id/disable_backups"
+                android:layout_centerInParent="true"
+
+                android:layout_marginTop="5dp"
+                />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/airport"
+                android:scaleType="centerCrop"
+                android:layout_centerInParent="true"
+
+                android:layout_alignParentTop="true"
+                android:id="@+id/reboot"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="reboot"
+                android:layout_centerInParent="true"
+
+                android:layout_below="@id/reboot"
+                android:layout_marginTop="5dp"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:weightSum="3"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/hootel"
+                        android:layout_centerInParent="true"
+                        android:scaleType="centerCrop"
+                        android:layout_alignParentTop="true"
+                        android:id="@+id/power_cycle"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="enable_backups"
+                        android:layout_centerInParent="true"
+
+                        android:layout_below="@id/power_cycle"
+                        android:layout_marginTop="5dp"
+                        />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/busstand"
+                        android:scaleType="centerCrop"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerInParent="true"
+
+                        android:id="@+id/shutdown"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="shutdown"
+                        android:layout_below="@id/shutdown"
+                        android:layout_centerInParent="true"
+
+                        android:layout_marginTop="5dp"
+                        />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/airport"
+                        android:scaleType="centerCrop"
+                        android:layout_centerInParent="true"
+
+                        android:layout_alignParentTop="true"
+                        android:id="@+id/power_off"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="power_off"
+                        android:layout_centerInParent="true"
+
+                        android:layout_below="@id/power_off"
+                        android:layout_marginTop="5dp"
+                        />
+                </RelativeLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:weightSum="3"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/hootel"
+                        android:layout_centerInParent="true"
+                        android:scaleType="centerCrop"
+                        android:layout_alignParentTop="true"
+                        android:id="@+id/power_on"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="power_on"
+                        android:layout_centerInParent="true"
+
+                        android:layout_below="@id/power_on"
+                        android:layout_marginTop="5dp"
+                        />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/busstand"
+                        android:scaleType="centerCrop"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerInParent="true"
+
+                        android:id="@+id/password_reset"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="password_reset"
+                        android:layout_below="@id/password_reset"
+                        android:layout_centerInParent="true"
+
+                        android:layout_marginTop="5dp"
+                        />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:visibility="invisible"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/airport"
+                        android:scaleType="centerCrop"
+                        android:layout_centerInParent="true"
+
+                        android:layout_alignParentTop="true"
+                        android:id="@+id/power_off"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="power_off"
+                        android:layout_centerInParent="true"
+
+                        android:layout_below="@id/power_off"
+                        android:layout_marginTop="5dp"
+                        />
+                </RelativeLayout>
+            </LinearLayout>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:layout_marginTop="-8dp"
+        android:text="Lights Camera Action"
+        android:layout_below="@+id/id"
+        android:textColor="#fff"
+        android:id="@id/search"
+        android:background="@drawable/grad"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:fontFamily="monospace"
+        android:layout_below="@+id/search"
+        android:layout_marginTop="20dp"
+        android:textColor="#fff"
+        android:id="@+id/output" />
+            </LinearLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>
