@@ -7,7 +7,6 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.telephony.SmsManager;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -15,8 +14,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import java.util.ArrayList;
 
 import static android.view.View.GONE;
 
@@ -30,6 +27,7 @@ public class nearBy extends AppCompatActivity {
     private String senderID,result;
     ProgressDialog p;
     private IncomingData data;
+    String type;
 
     private BroadcastReceiver intentReciever = new BroadcastReceiver() {
         @Override
@@ -46,10 +44,10 @@ public class nearBy extends AppCompatActivity {
             if (incomingDataContent.contains("nearby")||incomingDataContent.contains("Nearby")) {
                 p.hide();
                 what.setVisibility(GONE);
-
                 search.setVisibility(GONE);
+                output.setVisibility(View.VISIBLE);
                 outputText = incomingDataContent;
-//              weatherstatus = ( str_piece(weatherstatus, ',', 1));
+                outputText = ( str_piece(outputText, ':', 2));
 //                outputText.
                 output.setText(outputText);
             }
@@ -76,22 +74,25 @@ public class nearBy extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_near_by);
-
+        type = getIntent().getStringExtra("type");
         intentFilter = new IntentFilter();
+        getSupportActionBar().setTitle("Find "+type);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
         intentFilter.addAction("SMS_RECEIVED_ACTION");
-        Toast.makeText(getApplicationContext(), "Listening for Incoming Messages", Toast.LENGTH_LONG).show();
+//        Toast.makeText(getApplicationContext(), "Listening for Incoming Messages", Toast.LENGTH_LONG).show();
         output = (TextView) findViewById(R.id.output);
         what =(EditText) findViewById(R.id.what);
         p = new ProgressDialog(this);
+        output.setVisibility(GONE);
         search = ( Button) findViewById(R.id.search);
         search.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 p.setMessage("Getting Nearby");
                 p.show();
-                SmsManager sms = SmsManager.getDefault();
-                ArrayList<String> parts = sms.divideMessage("nearby:"+what.getText().toString());
-                sms.sendMultipartTextMessage("8872039507", null, parts, null, null);
+//                SmsManager sms = SmsManager.getDefault();
+//                ArrayList<String> parts = sms.divideMessage("nearby:"+what.getText().toString());
+//                sms.sendMultipartTextMessage("8872039507", null, parts, null, null);
             }
         });
 

@@ -53,7 +53,7 @@
                             android:text="Hotels"
                             android:layout_marginLeft="35dp"
                             android:layout_centerHorizontal="true"
-                            android:layout_below="@+id/hotel"
+                            android:layout_below="@id/hotel"
                             android:layout_marginTop="5dp"
                             />
                     </RelativeLayout>
@@ -76,7 +76,7 @@
                             android:text="Bus Stand"
                             android:layout_marginLeft="35dp"
                             android:layout_centerHorizontal="true"
-                            android:layout_below="@+id/bus"
+                            android:layout_below="@id/bus"
                             android:layout_marginTop="5dp"
                             />
                     </RelativeLayout>
@@ -99,7 +99,7 @@
                             android:text="Airport"
                             android:layout_marginLeft="35dp"
                             android:layout_centerHorizontal="true"
-                            android:layout_below="@+id/airport"
+                            android:layout_below="@id/airport"
                             android:layout_marginTop="5dp"
                             />
                     </RelativeLayout>
@@ -130,7 +130,7 @@
                             android:text="ATMs"
                             android:layout_marginLeft="35dp"
                             android:layout_centerHorizontal="true"
-                            android:layout_below="@+id/atm"
+                            android:layout_below="@id/atm"
                             android:layout_marginTop="5dp"
                             />
                     </RelativeLayout>
@@ -153,7 +153,7 @@
                             android:text="Restaurants"
                             android:layout_marginLeft="35dp"
                             android:layout_centerHorizontal="true"
-                            android:layout_below="@+id/foodpoint"
+                            android:layout_below="@id/foodpoint"
                             android:layout_marginTop="5dp"
                             />
                     </RelativeLayout>
@@ -175,7 +175,7 @@
                             android:layout_height="wrap_content"
                             android:text="Petrol Pumps"
                             android:layout_centerHorizontal="true"
-                            android:layout_below="@+id/petrol"
+                            android:layout_below="@id/petrol"
                             android:layout_marginTop="5dp"
                             />
                     </RelativeLayout>
@@ -205,7 +205,7 @@
                         android:layout_height="wrap_content"
                         android:text="Rail Station"
                         android:layout_centerHorizontal="true"
-                        android:layout_below="@+id/railway"
+                        android:layout_below="@id/railway"
                         android:layout_marginTop="5dp"
                         />
                 </RelativeLayout>
@@ -228,7 +228,7 @@
                         android:layout_height="wrap_content"
                         android:text="Banks"
                         android:layout_centerHorizontal="true"
-                        android:layout_below="@+id/bank"
+                        android:layout_below="@id/bank"
                         android:layout_marginTop="5dp"
                         />
                 </RelativeLayout>
@@ -250,7 +250,7 @@
                         android:layout_height="wrap_content"
                         android:text="Hospitals"
                         android:layout_centerHorizontal="true"
-                        android:layout_below="@+id/hospital"
+                        android:layout_below="@id/hospital"
                         android:layout_marginTop="5dp"
                         />
                 </RelativeLayout>
@@ -304,7 +304,7 @@
                             android:layout_height="wrap_content"
                             android:text="Search"
                             android:layout_centerHorizontal="true"
-                            android:layout_below="@+id/search"
+                            android:layout_below="@id/search"
                             android:layout_marginTop="5dp"
                             />
                     </RelativeLayout>
@@ -326,7 +326,7 @@
                             android:layout_height="wrap_content"
                             android:text="Translate"
                             android:layout_centerHorizontal="true"
-                            android:layout_below="@+id/translate"
+                            android:layout_below="@id/translate"
                             android:layout_marginTop="5dp"
                             />
                     </RelativeLayout>
@@ -348,7 +348,7 @@
                             android:layout_height="wrap_content"
                             android:text="News"
                             android:layout_centerHorizontal="true"
-                            android:layout_below="@+id/news"
+                            android:layout_below="@id/news"
                             android:layout_marginTop="5dp"
                             />
                     </RelativeLayout>
@@ -378,7 +378,7 @@
                             android:layout_height="wrap_content"
                             android:text="directions"
                             android:layout_centerHorizontal="true"
-                            android:layout_below="@+id/directions"
+                            android:layout_below="@id/directions"
                             android:layout_marginTop="5dp"
                             />
                     </RelativeLayout>
@@ -400,7 +400,7 @@
                             android:layout_height="wrap_content"
                             android:text="Weather"
                             android:layout_centerHorizontal="true"
-                            android:layout_below="@+id/weather"
+                            android:layout_below="@id/weather"
                             android:layout_marginTop="5dp"
                             />
                     </RelativeLayout>
@@ -422,7 +422,7 @@
                             android:layout_height="wrap_content"
                             android:text="Wikipedia"
                             android:layout_centerHorizontal="true"
-                            android:layout_below="@+id/wikipedia"
+                            android:layout_below="@id/wikipedia"
                             android:layout_marginTop="5dp"
                             />
                     </RelativeLayout>
@@ -479,7 +479,7 @@
                             android:layout_height="wrap_content"
                             android:text="Bus"
                             android:layout_centerHorizontal="true"
-                            android:layout_below="@+id/Bus"
+                            android:layout_below="@id/Bus"
                             android:layout_marginTop="5dp"
                             />
                     </RelativeLayout>
@@ -501,7 +501,7 @@
                             android:layout_height="wrap_content"
                             android:text="Trains"
                             android:layout_centerHorizontal="true"
-                            android:layout_below="@+id/railways"
+                            android:layout_below="@id/railways"
                             android:layout_marginTop="5dp"
                             />
                     </RelativeLayout>
@@ -523,7 +523,7 @@
                             android:layout_height="wrap_content"
                             android:text="Flights"
                             android:layout_centerHorizontal="true"
-                            android:layout_below="@+id/airports"
+                            android:layout_below="@id/airports"
                             android:layout_marginTop="5dp"
                             />
                     </RelativeLayout>

@@ -18,17 +18,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="180dp"
         android:id="@+id/news"
-        android:text="1. Obamacare insurers could face impossible task of collecting billions of dollars owed by government
 
-2. In meeting with Abe, Trump says US committed to Japan security, moving away from campaign rhetoric
-
-3. Russia eyes sending Snowden to US as 'gift' to Trump, official says
-
-4. Japan limited immigration; Now it's short of workers
-
-5. Serial house sitters shed the shackles of a mortgage
-
-"
         android:layout_marginLeft="30dp"
         android:textColor="#fff"
         android:fontFamily="monospace"

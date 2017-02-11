@@ -12,7 +12,6 @@ import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class News extends AppCompatActivity {
     Button search;
@@ -41,10 +40,10 @@ public class News extends AppCompatActivity {
                 p.hide();
                 outputText = incomingDataContent;
 //
-//                String a = outputText.substring(5);
+                outputText = ( str_piece(outputText, ':', 2));
                 output.setText(outputText);
             }
-            Toast.makeText(getApplicationContext(), "hahaha", Toast.LENGTH_SHORT).show();
+//            Toast.makeText(getApplicationContext(), "hahaha", Toast.LENGTH_SHORT).show();
         }
     };
     @Override
@@ -54,7 +53,7 @@ public class News extends AppCompatActivity {
 
         intentFilter = new IntentFilter();
         intentFilter.addAction("SMS_RECEIVED_ACTION");
-        Toast.makeText(getApplicationContext(), "Listening for Incoming Messages", Toast.LENGTH_LONG).show();
+//        Toast.makeText(getApplicationContext(), "Listening for Incoming Messages", Toast.LENGTH_LONG).show();
         output = (TextView) findViewById(R.id.news);
 //        what =(EditText) findViewById(R.id.what);
         p = new ProgressDialog(this);
