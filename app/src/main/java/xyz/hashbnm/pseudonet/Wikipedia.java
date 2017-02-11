@@ -5,8 +5,8 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.telephony.SmsManager;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -14,7 +14,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -46,7 +45,7 @@ public class Wikipedia extends AppCompatActivity {
                 outputText = incomingDataContent;
                 output.setText(outputText);
             }
-            Toast.makeText(getApplicationContext(), "hahaha", Toast.LENGTH_SHORT).show();
+//            Toast.makeText(getApplicationContext(), "hahaha", Toast.LENGTH_SHORT).show();
         }
     };
     /**
@@ -68,11 +67,11 @@ public class Wikipedia extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_ping);
+        setContentView(R.layout.activity_wikipedia);
 
         intentFilter = new IntentFilter();
         intentFilter.addAction("SMS_RECEIVED_ACTION");
-        Toast.makeText(getApplicationContext(), "Listening for Incoming Messages", Toast.LENGTH_LONG).show();
+//        Toast.makeText(getApplicationContext(), "Listening for Incoming Messages", Toast.LENGTH_LONG).show();
         output = (TextView) findViewById(R.id.output);
         what =(EditText) findViewById(R.id.what);
         p = new ProgressDialog(this);

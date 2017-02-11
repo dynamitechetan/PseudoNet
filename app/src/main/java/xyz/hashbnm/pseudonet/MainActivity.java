@@ -15,7 +15,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -71,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
 
 //                weatherstatus = ( str_piece(weatherstatus, ',', 1));
             }
-            Toast.makeText(getApplicationContext(), "hahaha", Toast.LENGTH_SHORT).show();
+//            Toast.makeText(getApplicationContext(), "hahaha", Toast.LENGTH_SHORT).show();
         }
     };
     /**
@@ -97,7 +96,7 @@ public class MainActivity extends AppCompatActivity {
 
         intentFilter = new IntentFilter();
         intentFilter.addAction("SMS_RECEIVED_ACTION");
-        Toast.makeText(getApplicationContext(), "Listening for Incoming Messages", Toast.LENGTH_LONG).show();
+//        Toast.makeText(getApplicationContext(), "Listening for Incoming Messages", Toast.LENGTH_LONG).show();
         temp = (TextView) findViewById(R.id.temp);
         weather = (TextView) findViewById(R.id.weather);
         status = (ImageView) findViewById(R.id.status);

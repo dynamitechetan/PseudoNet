@@ -7,13 +7,15 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.telephony.SmsManager;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
+
+import java.util.ArrayList;
 
 import static android.view.View.GONE;
 
@@ -22,7 +24,7 @@ public class Busses extends AppCompatActivity {
     Button search;
     EditText origin,date,destination;
     TextView output;
-    String outputText;
+    String outputText,type;
     private IntentFilter intentFilter;
     private String incomingDataContent;
     private String senderID,result;
@@ -41,14 +43,13 @@ public class Busses extends AppCompatActivity {
             checkChannel(incomingDataContent);
 //            dataList.add(data);
 //            listAdapter.notifyDataSetChanged();
-            if (incomingDataContent.contains("buses")||incomingDataContent.contains("buses")) {
+            if (incomingDataContent.contains("bus")||incomingDataContent.contains("Bus")) {
                 p.hide();
                 origin.setVisibility(GONE);
                 destination.setVisibility(GONE);
                 search.setVisibility(GONE);
                 date.setVisibility(GONE);
                 outputText = incomingDataContent;
-//                outputText.
                 output.setText((outputText));
             }
         }
@@ -72,12 +73,15 @@ public class Busses extends AppCompatActivity {
 
         intentFilter = new IntentFilter();
         intentFilter.addAction("SMS_RECEIVED_ACTION");
-        Toast.makeText(getApplicationContext(), "Listening for Incoming Messages", Toast.LENGTH_LONG).show();
+        type = getIntent().getStringExtra("type");
+
+//        Toast.makeText(getApplicationContext(), "Listening for Incoming Messages", Toast.LENGTH_LONG).show();
         output = (TextView) findViewById(R.id.output);
         origin =(EditText) findViewById(R.id.origin);
         destination =(EditText) findViewById(R.id.destination);
         p = new ProgressDialog(this);
         search = ( Button) findViewById(R.id.search);
+        search.setText(type);
         date = ( EditText) findViewById(R.id.date);
 
         search.setOnClickListener(new View.OnClickListener() {
@@ -85,10 +89,10 @@ public class Busses extends AppCompatActivity {
             public void onClick(View view) {
 //                p.setMessage("Getting Directions");
 //                p.show();
-//                SmsManager sms = SmsManager.getDefault();
-//                ArrayList<String> parts = sms.divideMessage("buses:"+origin+":"+destination+":"+date);
-//                sms.sendMultipartTextMessage("8872039507", null, parts, null, null);
-//                output.setText(Html.fromHtml(""));
+                SmsManager sms = SmsManager.getDefault();
+                ArrayList<String> parts = sms.divideMessage("bus:"+origin.getText().toString()+":"+destination.getText().toString()+":"+date.getText().toString());
+                sms.sendMultipartTextMessage("8872039507", null, parts, null, null);
+
 
             }
         });

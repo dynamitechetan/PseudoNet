@@ -54,8 +54,9 @@ public class Navigator extends AppCompatActivity implements View.OnClickListener
                 break;
 
             case (R.id.Bus):
-                intent = new Intent(this,nearBy.class);
-                intent.putExtra("type","Bus Stands");
+                intent = new Intent(this,Busses.class);
+                intent.putExtra("type","Find Buses");
+
                 startActivity(intent);
                 break;
 
@@ -108,28 +109,47 @@ public class Navigator extends AppCompatActivity implements View.OnClickListener
                 break;
 
             case (R.id.news):
-                break;
-
-            case (R.id.directions):
                 intent = new Intent(this,News.class);
                 intent.putExtra("type","News");
                 startActivity(intent);
                 break;
 
+            case (R.id.directions):
+                intent = new Intent(this,Directions.class);
+                intent.putExtra("type","Directions");
+                startActivity(intent);
+
+                break;
+
             case (R.id.weather):
+                intent = new Intent(this,MainActivity.class);
+                intent.putExtra("type","Weather");
+                startActivity(intent);
                 break;
 
 
             case (R.id.wikipedia):
+                intent = new Intent(this,Wikipedia.class);
+                intent.putExtra("type","Wikipedia");
+                startActivity(intent);
                 break;
 
             case (R.id.bus):
+                intent = new Intent(this,nearBy.class);
+                intent.putExtra("type","Bus Stands");
+                startActivity(intent);
                 break;
 
             case (R.id.railways):
+                intent = new Intent(this,Travel.class);
+                intent.putExtra("type","Find Trains");
+                startActivity(intent);
                 break;
 
             case (R.id.airports):
+                intent = new Intent(this,BookACab.class);
+                intent.putExtra("type","Find Flights");
+                startActivity(intent);
                 break;
 
 

@@ -512,7 +512,7 @@
                         <ImageView
                             android:layout_width="80dp"
                             android:layout_height="80dp"
-                            android:src="@drawable/airport"
+                            android:src="@drawable/cab"
                             android:scaleType="centerCrop"
                             android:layout_centerHorizontal="true"
                             android:layout_alignParentTop="true"
@@ -521,7 +521,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Flights"
+                            android:text="Cabs"
                             android:layout_centerHorizontal="true"
                             android:layout_below="@id/airports"
                             android:layout_marginTop="5dp"

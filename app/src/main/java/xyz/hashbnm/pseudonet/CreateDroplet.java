@@ -16,9 +16,9 @@ import android.widget.TextView;
 
 import static android.view.View.GONE;
 
-public class Flights extends AppCompatActivity {
+public class CreateDroplet extends AppCompatActivity {
     Button search;
-    EditText origin,date,destination;
+    EditText name,memory,destination,image;
     TextView output;
     String outputText;
     private IntentFilter intentFilter;
@@ -37,16 +37,17 @@ public class Flights extends AppCompatActivity {
             data.setSenderID(senderID);
             data.setStatus("Completed");
             checkChannel(incomingDataContent);
-//            dataList.add(data);
-//            listAdapter.notifyDataSetChanged();
-            if (incomingDataContent.contains("flights")||incomingDataContent.contains("Flights")) {
+//
+
+            if (incomingDataContent.contains("createdroplet")||incomingDataContent.contains("createdroplet")) {
                 p.hide();
-                origin.setVisibility(GONE);
+                name.setVisibility(GONE);
                 destination.setVisibility(GONE);
                 search.setVisibility(GONE);
-                date.setVisibility(GONE);
+                memory.setVisibility(GONE);
                 outputText = incomingDataContent;
-//                outputText.
+                outputText = ( str_piece(outputText, ':', 2));
+
                 output.setText((outputText));
             }
         }
@@ -66,27 +67,28 @@ public class Flights extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_travel);
+        setContentView(R.layout.activity_create_droplet);
 
         intentFilter = new IntentFilter();
         intentFilter.addAction("SMS_RECEIVED_ACTION");
 //        Toast.makeText(getApplicationContext(), "Listening for Incoming Messages", Toast.LENGTH_LONG).show();
         output = (TextView) findViewById(R.id.output);
-        origin =(EditText) findViewById(R.id.origin);
+        name =(EditText) findViewById(R.id.origin);
+        image =(EditText) findViewById(R.id.image);
         destination =(EditText) findViewById(R.id.destination);
         p = new ProgressDialog(this);
         search = ( Button) findViewById(R.id.search);
-        date = ( EditText) findViewById(R.id.date);
+        memory = ( EditText) findViewById(R.id.date);
 
         search.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                p.setMessage("Getting Directions");
+//                p.setMessage("Creating Droplet");
 //                p.show();
 //                SmsManager sms = SmsManager.getDefault();
-//                ArrayList<String> parts = sms.divideMessage("flights:"+origin+":"+destination+":"+date);
+//                ArrayList<String> parts = sms.divideMessage("createdroplet:"+name.getText().toString()+":"+destination.getText().toString()+":"+memory.getText().toString()+":"+image.getText().toString());
 //                sms.sendMultipartTextMessage("8872039507", null, parts, null, null);
-//                output.setText(Html.fromHtml(""));
+
 
             }
         });

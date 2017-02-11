@@ -13,7 +13,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class BookACab extends AppCompatActivity {
 
@@ -43,6 +42,7 @@ public class BookACab extends AppCompatActivity {
                 p.hide();
                 outputText = incomingDataContent;
 //                outputText.
+                outputText = str_piece(outputText,':',2);
                 output.setText((outputText));
             }
         }
@@ -66,7 +66,7 @@ public class BookACab extends AppCompatActivity {
 
         intentFilter = new IntentFilter();
         intentFilter.addAction("SMS_RECEIVED_ACTION");
-        Toast.makeText(getApplicationContext(), "Listening for Incoming Messages", Toast.LENGTH_LONG).show();
+//        Toast.makeText(getApplicationContext(), "Listening for Incoming Messages", Toast.LENGTH_LONG).show();
         output = (TextView) findViewById(R.id.output);
         origin =(EditText) findViewById(R.id.origin);
         destination =(EditText) findViewById(R.id.destination);

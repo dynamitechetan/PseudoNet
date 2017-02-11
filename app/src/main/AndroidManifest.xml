@@ -33,12 +33,11 @@
         <activity android:name=".Directions" />
         <activity android:name=".Ping" />
         <activity android:name=".Wikipedia" />
-        <activity android:name=".Travel"></activity>
+        <activity android:name=".Travel" />
         <activity android:name=".Flights" />
         <activity
             android:name=".Busses"
-            android:label="@string/title_activity_busses"
-            android:theme="@style/Black.NoActionBar" />
+            android:label="@string/title_activity_busses" />
         <activity android:name=".Navigator">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -46,7 +45,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ResturantsNearby"></activity>
+        <activity android:name=".ResturantsNearby" />
+        <activity android:name=".GetDropletByID" />
+        <activity android:name=".GetAllDroplets" />
+        <activity android:name=".CreateDroplet" />
+        <activity android:name=".DeleteDroplet" />
+        <activity android:name=".ActionsDO"></activity>
     </application>
 
 </manifest>

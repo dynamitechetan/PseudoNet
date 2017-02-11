@@ -6,9 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/bluepurpel"
     tools:context="xyz.hashbnm.pseudonet.BookACab">
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+
         <EditText
             android:layout_width="match_parent"
             android:layout_height="50dp"
@@ -53,4 +51,4 @@
             android:textColor="#fff"
             android:id="@+id/output" />
     </RelativeLayout>
-</RelativeLayout>
+
