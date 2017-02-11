@@ -12,7 +12,7 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:id="@+id/city"
+        android:id="@+id/what"
         android:elevation="100dp"
         android:padding="16dp"
         android:hint="Pizza hut in Hyderabad"
@@ -26,23 +26,18 @@
         android:layout_marginTop="-8dp"
         android:text="SEARCH Nearby"
         android:id="@+id/search"
-        android:layout_below="@+id/city"
+        android:layout_below="@+id/what"
         android:textColor="#fff"
         android:background="@drawable/grad"
         />
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="25dp"
         android:text=""
         android:layout_below="@+id/search"
-        android:layout_alignLeft="@+id/search"
-        android:layout_alignStart="@+id/search"
-        android:layout_marginLeft="11dp"
-        android:layout_marginStart="11dp"
-        android:layout_marginTop="10dp"
-        android:id="@+id/text" />
+        android:textColor="#fff"
+        android:id="@+id/output" />
 
 
 

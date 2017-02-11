@@ -15,11 +15,7 @@
         android:supportsRtl="true"
         android:theme="@style/Black">
         <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
 
         <receiver
@@ -34,8 +30,16 @@
         </receiver>
 
         <activity android:name=".BookACab" />
-        <activity android:name=".News" />
-        <activity android:name=".nearBy"></activity>
+        <activity android:name=".News" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".nearBy">
+
+        </activity>
     </application>
 
 </manifest>
